@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <h5app.comxiaomi.h5app.utils.MyCacheWebView
+        android:id="@+id/main_web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </h5app.comxiaomi.h5app.utils.MyCacheWebView>
+
+</LinearLayout>

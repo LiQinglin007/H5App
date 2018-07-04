@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "h5app.comxiaomi.h5app"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+greendao {
+    schemaVersion 1   //数据库版本号
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api "com.android.support:support-v4:27.1.0"
+    api "com.android.support:appcompat-v7:27.1.0"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //状态栏  https://github.com/gyf-dev/ImmersionBar
+    api 'com.gyf.barlibrary:barlibrary:2.3.0'
+    //数据库
+    api 'org.greenrobot:greendao:3.2.0' // add library
+    api 'org.greenrobot:greendao-generator:3.2.0'
+    //RecyclerView依赖
+    implementation 'com.android.support:recyclerview-v7:27.1.0'
+    api "com.android.support:design:27.1.0"
+    implementation 'ren.yale.android:cachewebviewlib:1.4.0'
+    //事件总线
+    api 'org.greenrobot:eventbus:3.0.0'
+}
